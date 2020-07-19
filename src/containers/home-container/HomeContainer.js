@@ -3,6 +3,8 @@ import ReactModal from 'react-modal'
 
 import HomePage from '../../pageComponents/HomePage'
 
+import { BASE_URL } from '../../utils/constants'
+
 export default class HomeContainer extends React.Component {
   constructor(props) {
     super(props);
@@ -16,7 +18,8 @@ export default class HomeContainer extends React.Component {
 
   async componentDidMount() {
       try {
-          const responsePromise = await fetch(`https://api.themoviedb.org/3/trending/movie/day?page=1&api_key=${process.env.REACT_APP_API_KEY}`, {
+          const movieTrendingUrl = `${BASE_URL}/3/trending/movie/day?page=1&api_key=${process.env.REACT_APP_API_KEY}`
+          const responsePromise = await fetch(movieTrendingUrl, {
             headers: {
               Authorization: `Bearer ${process.env.REACT_APP_API_KEY}`,
               "Content-Type": "application/json;charset=utf-8",
