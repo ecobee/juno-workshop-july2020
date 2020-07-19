@@ -1,6 +1,7 @@
 import React from "react";
 import CardContainer from "./containers/CardContainer";
 import Card from "./components/Card";
+import Search from "./components/Search";
 export default class Homepage extends React.Component {
   constructor(props) {
     super(props);
@@ -48,6 +49,7 @@ export default class Homepage extends React.Component {
     } else {
       return (
         <div className="HomePage">
+          <Search />
           <CardContainer>
             {movies.map((movie) => (
               <Card key={movie.id} movie={movie} />
