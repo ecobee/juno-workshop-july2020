@@ -2,6 +2,8 @@
 
 For our second exercise, you'll be adding search functionality to the homepage that will allow the user to search for a movie and display the first page of results. 
 
+![homepage with search](../docs/assets/homepage_search.png)
+
 ## Details
 ### User story
 
@@ -19,5 +21,3 @@ User stories typically come with a set of acceptance criteria, which should be m
 - [ ]  Handle case where there are no search results returned
 - [ ]  Handle case where an error is returned from the API
 - [ ]  (Bonus) Add validation to prevent users from searching terms that will result in an error (e.g. empty strings)
-
-## Designs

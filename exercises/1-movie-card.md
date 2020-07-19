@@ -2,6 +2,8 @@
 
 For our first exercise, you'll be building out a click-through movie details card component that displays additional information for a given film.
 
+![movie details page](../docs/assets/movie_detail.png)
+
 ## Details
 
 ### User story
@@ -18,5 +20,3 @@ User stories typically come with a set of acceptance criteria, which should be m
 - [ ]  Movie detail card component should appear on click
 - [ ]  Movie detail card component should display poster, release date, length, description, genre, title, rating, IMDb link
 - [ ]  Movie detail card component should include an "exit" or "back" button that hides the component on click
-
-## Designs
