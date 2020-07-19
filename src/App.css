@@ -89,6 +89,16 @@ button:hover {
   fill: white;
 }
 
+.DetailsImg {
+  display: inline-block;
+  width: 50%;
+}
+
+.DetailsInfo {
+  display: inline-block;
+  width: 50%;
+}
+
 @media (min-width: 1024px) {
   .HomePage {
     width: 100%;

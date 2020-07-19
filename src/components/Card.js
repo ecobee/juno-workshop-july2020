@@ -1,6 +1,7 @@
 import React from "react";
 import Img from "./Img";
 import ReactModal from "react-modal";
+import MovieDetails from "./MovieDetails";
 
 class Card extends React.Component {
   constructor(props) {
@@ -45,6 +46,7 @@ class Card extends React.Component {
           onRequestClose={this.handleCloseMovieModal}
         >
           <button onClick={this.handleCloseMovieModal}>X</button>
+          <MovieDetails />
         </ReactModal>
       </div>
     );
