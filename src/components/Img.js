@@ -1,6 +1,6 @@
 import React from "react";
 
-function Img({ path, title, id }) {
+function Img({ path, title, id, handleClick }) {
   return (
     <img
       className="image"
@@ -9,6 +9,7 @@ function Img({ path, title, id }) {
       loading="lazy"
       width="100%"
       height="100%"
+      onClick={handleClick}
     />
   );
 }

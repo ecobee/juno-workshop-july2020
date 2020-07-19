@@ -64,3 +64,6 @@
     width: 67%;
   }
 }
+.image:hover {
+  cursor: pointer;
+}
