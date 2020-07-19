@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  color: white;
 }
 
 .App-logo {
@@ -52,6 +53,37 @@
 
 .HomePage {
   margin: auto;
+}
+
+.Search {
+  text-align: left;
+  padding-bottom: 1em;
+}
+
+.Search > input {
+  line-height: 2.5em;
+  width: 50%;
+  font-size: 15px;
+  padding-left: 10px;
+  border-radius: 5px;
+}
+
+.Search > button {
+  line-height: 2.5em;
+  width: 100px;
+  background: #04addc;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.star {
+  fill: white;
 }
 
 @media (min-width: 1024px) {
