@@ -1,0 +1,21 @@
+.HomePage {
+    margin: auto;
+}
+
+.CardContainer {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+}
+  
+  
+@media (min-width: 1024px) {
+    .HomePage {
+        width: 100%;
+    }
+}
+@media (min-width: 1024px) {
+    .HomePage {
+        width: 67%;
+    }
+}
