@@ -1,23 +1,25 @@
 .card {
-    width: 250px;
-    display: flex;
-    flex-flow: column nowrap;
-    margin: auto;
+  width: 250px;
+  display: flex;
+  flex-flow: column nowrap;
+  margin: auto;
 }
 
 .card-movie-title {
-    margin-bottom: 18px;
+  margin-bottom: 18px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-
 .star {
-    fill: white;
-    margin-left: 6px;
-}  
+  fill: white;
+  margin-left: 6px;
+}
 
 .card-ratings {
-    display: flex;
-    flex-direction: row;
-    align-items: baseline;
-    justify-content: center;
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: center;
 }
