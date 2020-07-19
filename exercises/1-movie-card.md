@@ -14,9 +14,7 @@ As developers, we're often presented with user stories that define the requireme
 
 ### Acceptance criteria
 
-User stories typically come with a set of acceptance criteria, which should be met in order for the feature to be considered complete (but a reminder, you don't necessarily **have** to complete all of it for the purposes of our exercise). Your acceptance criteria for this feature is: 
+User stories typically come with a set of acceptance criteria, which should be met in order for the feature to be considered complete (but a reminder, you don't necessarily **have** to complete all of it for the purposes of our exercise). Your acceptance criteria for this feature is:
 
-- [ ]  On click of a movie card on the homepage, make a GET request to `GET /movie/{movie_id}` endpoint to get movie details ([documentation here](https://developers.themoviedb.org/3/movies/get-movie-details))
-- [ ]  Movie detail card component should appear on click
-- [ ]  Movie detail card component should display poster, release date, length, description, genre, title, rating, IMDb link
-- [ ]  Movie detail card component should include an "exit" or "back" button that hides the component on click
+- [ ] On click of a movie card on the homepage, make a GET request to `GET /movie/{movie_id}` endpoint to get movie details ([documentation here](https://developers.themoviedb.org/3/movies/get-movie-details))
+- [ ] Movie detail card component should display poster, release date, length, description, genre, title, rating, IMDb link
