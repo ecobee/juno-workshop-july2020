@@ -5,6 +5,16 @@
     margin: auto;
 }
 
+.card-movie-title {
+    margin-bottom: 18px;
+}
+
+
+.star {
+    fill: white;
+    margin-left: 6px;
+}  
+
 .card-ratings {
     display: flex;
     flex-direction: row;

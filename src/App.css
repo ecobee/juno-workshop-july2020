@@ -38,67 +38,7 @@
   }
 }
 
-.card {
-  width: 250px;
-  display: flex;
-  flex-flow: column nowrap;
-  margin: auto;
-}
-
-.CardContainer {
-  display: flex;
-  justify-content: space-between;
-  flex-flow: row wrap;
-}
-
-.HomePage {
-  margin: auto;
-}
-
-.Search {
-  text-align: center;
-  padding-bottom: 1em;
-}
-
-.Search > input {
-  line-height: 2.5em;
-  width: 49%;
-  font-size: 15px;
-  padding-left: 10px;
-  border-radius: 5px;
-  border: 0;
-  margin-right: 5px;
-}
-
-.Search > button {
-  line-height: 2.5em;
-  width: 100px;
-  background: #04addc;
-  color: white;
-  font-size: 15px;
-  font-weight: bold;
-  border-radius: 5px;
-  border: 0;
-}
 
 button:hover {
-  cursor: pointer;
-}
-
-.star {
-  fill: white;
-}
-
-@media (min-width: 1024px) {
-  .HomePage {
-    width: 100%;
-  }
-}
-@media (min-width: 1024px) {
-  .HomePage {
-    width: 67%;
-  }
-}
-.image:hover {
   cursor: pointer;
 }
