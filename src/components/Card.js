@@ -8,18 +8,15 @@ class Card extends React.Component {
     this.state = {
       showMovieDetailsModal: false,
     };
-
-    this.handleOpenMovieModal = this.handleOpenMovieModal.bind(this);
-    this.handleCloseMovieModal = this.handleCloseMovieModal.bind(this);
   }
 
-  handleOpenMovieModal() {
+  handleOpenMovieModal = () => {
     this.setState({ showMovieDetailsModal: true });
-  }
+  };
 
-  handleCloseMovieModal() {
+  handleCloseMovieModal = () => {
     this.setState({ showMovieDetailsModal: false });
-  }
+  };
 
   render() {
     return (
