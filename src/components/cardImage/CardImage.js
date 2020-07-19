@@ -1,6 +1,6 @@
 import React from "react";
 
-function Img({ path, title, id, handleClick }) {
+const CardImage = ({ path, title, handleClick }) => {
   return (
     <img
       className="image"
@@ -14,4 +14,4 @@ function Img({ path, title, id, handleClick }) {
   );
 }
 
-export default Img;
+export default CardImage;

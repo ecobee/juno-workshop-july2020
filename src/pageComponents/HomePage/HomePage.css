@@ -1,0 +1,24 @@
+.home-page {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-items: center;
+}
+
+.card-container {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+}
+  
+  
+@media (min-width: 1024px) {
+    .home-page {
+        width: 100%;
+    }
+}
+@media (min-width: 1024px) {
+    .card-container {
+        width: 67%;
+    }
+}

@@ -1,13 +1,13 @@
 import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
-import Homepage from "./Homepage";
+
+import HomeContainer from './containers/home-container'
 
 function App() {
   return (
     <div className="App">
       <h1>Juno x ecobee: Pair Programming Exercise</h1>
-      <Homepage />
+      <HomeContainer />
     </div>
   );
 }
