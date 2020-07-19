@@ -18,7 +18,7 @@ In today's session, with the guidance and support of your mentors you will addin
 
 For this exercise, you will be adding the ability for users to click on a movie on the homepage and see a popup card with additional details. The full instructions for this exercise can be found **[here](exercises/1-movie-card.md)**.
 
-### Exercise 2: Search Functionality
+### Feature #2: Search Functionality
 ![homepage with search](docs/assets/homepage_search.png)
 
 For this exercise, you will be adding search functionality to the homepage to allow users to look up the first page of movie results for their chosen search term. The full instructions for this exercise can be found **[here](exercises/2-search.md)**.
