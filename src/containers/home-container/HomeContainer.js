@@ -3,7 +3,7 @@ import ReactModal from 'react-modal'
 
 import HomePage from '../../pageComponents/HomePage'
 
-import { BASE_URL } from '../../utils/constants'
+import { MOVIE_BASE_URL } from '../../utils/constants'
 
 export default class HomeContainer extends React.Component {
   constructor(props) {
@@ -18,7 +18,7 @@ export default class HomeContainer extends React.Component {
 
   async componentDidMount() {
       try {
-          const movieTrendingUrl = `${BASE_URL}/3/trending/movie/day?page=1&api_key=${process.env.REACT_APP_API_KEY}`
+          const movieTrendingUrl = `${MOVIE_BASE_URL}/trending/movie/day?page=1&api_key=${process.env.REACT_APP_API_KEY}`
           const responsePromise = await fetch(movieTrendingUrl, {
             headers: {
               Authorization: `Bearer ${process.env.REACT_APP_API_KEY}`,
@@ -50,7 +50,7 @@ export default class HomeContainer extends React.Component {
 
   render() {
     const { error, isLoaded, movies } = this.state;
-    const hasMovies = movies.length > 0 
+    const hasMovies = movies && movies.length > 0 
     return (
       <>
         {error && 
