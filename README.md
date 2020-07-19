@@ -1,6 +1,6 @@
 
 # Juno x ecobee: Pair Programming Exercise
-**July 20, 2020**
+**July 22, 2020**
 
 For today's pairing exercise, we will be using React to build a movie dashboard application, pulling data from the [Movie Database API](https://developers.themoviedb.org/3/getting-started/introduction/). 
 
