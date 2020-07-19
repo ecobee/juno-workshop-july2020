@@ -33,6 +33,7 @@ class Card extends React.Component {
         <span>
           <p>
             {this.props.movie.vote_average}
+            {` `}
             <svg height="20" width="23" className="star rating" data-rating="1">
               <polygon points="9.9, 1.1, 3.3, 21.78, 19.8, 8.58, 0, 8.58, 16.5, 21.78" />
             </svg>
