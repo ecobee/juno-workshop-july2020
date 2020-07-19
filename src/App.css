@@ -36,3 +36,31 @@
     transform: rotate(360deg);
   }
 }
+
+.card {
+  width: 250px;
+  display: flex;
+  flex-flow: column nowrap;
+  margin: auto;
+}
+
+.CardContainer {
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row wrap;
+}
+
+.HomePage {
+  margin: auto;
+}
+
+@media (min-width: 1024px) {
+  .HomePage {
+    width: 100%;
+  }
+}
+@media (min-width: 1024px) {
+  .HomePage {
+    width: 67%;
+  }
+}

@@ -1,5 +1,6 @@
 import React from "react";
-
+import CardContainer from "./containers/CardContainer";
+import Card from "./components/Card";
 export default class Homepage extends React.Component {
   constructor(props) {
     super(props);
@@ -46,13 +47,13 @@ export default class Homepage extends React.Component {
       return <div>Loading...</div>;
     } else {
       return (
-        <ul>
-          {movies.map((movie) => (
-            <li key={movie.id}>
-              {movie.title} : {movie.overview}
-            </li>
-          ))}
-        </ul>
+        <div className="HomePage">
+          <CardContainer>
+            {movies.map((movie) => (
+              <Card key={movie.id} movie={movie} />
+            ))}
+          </CardContainer>
+        </div>
       );
     }
   }

@@ -6,6 +6,7 @@ import Homepage from "./Homepage";
 function App() {
   return (
     <div className="App">
+      <h1>Juno x ecobee: Pair Programming Exercise</h1>
       <Homepage />
     </div>
   );
