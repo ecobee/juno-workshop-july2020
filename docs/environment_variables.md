@@ -2,7 +2,6 @@
 
 We will be setting variables locally in development environments (not in production!) by creating `.env.local` on our root directory and populating with the key/values that you want. There is an example file called `.env.example` that goes over how to set values. This is the preferred method of setting environment variables for your local development environment as the file is in the .gitignore and will not be included in production environments.
 
-
 ## REACT_APP_API_KEY
 In order to call the MovieDB API, we need an API key. The API key will allow us to get the list of movies, their details and so much more! We can generate the API key by first creating an account through [The Movie Database](https://www.themoviedb.org/login) and following the steps described [here:](https://developers.themoviedb.org/3/getting-started/introduction)
 
