@@ -2,7 +2,7 @@
 # Juno X ecobee movie library
 
 
-Wireframe design: 
+## Wireframe design: 
 
 Homepage:
 ![homepage](docs/assets/homepage.png)
@@ -14,7 +14,12 @@ Homepage with search functionality:
 ![homepage with search](docs/assets/homepage_search.png)
 
 
-## Available Scripts
+
+## Getting started
+ - [Environment variable](docs/environment_variables.md)
+
+
+### Available Scripts
 
 In the project directory, you can run:
 
