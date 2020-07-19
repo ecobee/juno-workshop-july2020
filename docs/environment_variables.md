@@ -33,18 +33,19 @@ class MyComponent extends React.Component {
   }
 
   componentDidMount() {
-    fetch("https://api.themoviedb.org/3/movie/top_rated&page=1". {
+    fetch("https://api.themoviedb.org/3/trending/movie/day?page=1", {
       headers: {
-            'Authorization': `Bearer ${process.env.REACT_APP_API_KEY}`,
-            'Content-Type': 'application/json;charset=utf-8'
-        }
+        Authorization: `Bearer ${process.env.REACT_APP_API_KEY}`,
+        "Content-Type": "application/json;charset=utf-8",
+      },
     })
-      .then(res => res.json())
+      .then((res) => res.json())
       .then(
         (res) => {
+          console.log({ res });
           this.setState({
             isLoaded: true,
-            movies: res.results
+            movies: res.results,
           });
         },
         // Note: it's important to handle errors here
@@ -53,10 +54,10 @@ class MyComponent extends React.Component {
         (error) => {
           this.setState({
             isLoaded: true,
-            error
+            error,
           });
         }
-      )
+      );
   }
 
   render() {
@@ -68,7 +69,7 @@ class MyComponent extends React.Component {
     } else {
       return (
         <ul>
-          {movies.map(movie => (
+          {movies.map((movie) => (
             <li key={movie.id}>
               {movie.title} : {movie.overview}
             </li>
