@@ -1,9 +1,4 @@
 
-
-
-## Getting started
- - [Environment variable](docs/environment_variables.md)
-
 # Juno x ecobee: Pair Programming Exercise
 **July 20, 2020**
 
@@ -31,11 +26,11 @@ In today's exercise, with the guidance and support of your mentors you will addi
 
 ### MovieDB API Access
 
-In order to make requests to the MovieDB API, you will need to create an account and obtain an API key.
+In order to make requests to the MovieDB API, you will need to create an account and obtain an API key. 
 
-If you don't already have one, you can create an account [here](https://www.themoviedb.org/account/signup). Once your account is created, you can obtain an API key by going to **Settings** > **API**. You will then need to replace the placeholder API key in the app with the key you generate. 
+If you don't already have one, you can create an account [here](https://www.themoviedb.org/account/signup). 
 
-Please take a moment to do this now and make sure you are able to load the app and call the API. If you are having trouble with this, please reach out to a mentor.
+Once your account is created, you can follow the steps in the [environment variables documentation](docs/environment_variables.md) we've included. **Please take a moment to do this now and make sure you are able to load the app and call the API.** If you are having trouble with this, please reach out to a mentor.
 
 ## General Pairing Notes 
 
