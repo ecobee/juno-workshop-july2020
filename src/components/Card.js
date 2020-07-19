@@ -31,6 +31,7 @@ class Card extends React.Component {
           title={this.props.movie.title}
           vote={this.props.movie.vote_average}
           date={this.props.movie.release_date}
+          handleClick={this.handleOpenMovieModal}
         />
         <span>
           <p>
@@ -39,7 +40,6 @@ class Card extends React.Component {
               <polygon points="9.9, 1.1, 3.3, 21.78, 19.8, 8.58, 0, 8.58, 16.5, 21.78" />
             </svg>
           </p>
-          <button onClick={this.handleOpenMovieModal}>Show more</button>
         </span>
         <ReactModal
           isOpen={this.state.showMovieDetailsModal}
