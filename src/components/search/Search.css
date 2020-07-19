@@ -1,0 +1,25 @@
+.Search {
+    text-align: center;
+    padding-bottom: 1em;
+}
+  
+.Search > input {
+    line-height: 2.5em;
+    width: 49%;
+    font-size: 15px;
+    padding-left: 10px;
+    border-radius: 5px;
+    border: 0;
+    margin-right: 5px;
+}
+
+.Search > button {
+    line-height: 2.5em;
+    width: 100px;
+    background: #04addc;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 5px;
+    border: 0;
+}
