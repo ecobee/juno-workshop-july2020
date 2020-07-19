@@ -2,6 +2,8 @@ import React from "react";
 
 import Card from '../../components/card/Card'
 
+import './HomePage.css'
+
 const HomePage = (props) => {
   const { movies, onCardClick } = props
   

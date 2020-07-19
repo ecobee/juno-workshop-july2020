@@ -14,12 +14,14 @@ const Card = ({ movie, onClick }) => {
         date={movie.release_date}
       />
       <span>
-        <p>
+        <div className="card-ratings">
+          <span>
           {movie.vote_average}
+          </span>
           <svg height="20" width="23" class="star rating" data-rating="1">
             <polygon points="9.9, 1.1, 3.3, 21.78, 19.8, 8.58, 0, 8.58, 16.5, 21.78" />
           </svg>
-        </p>
+        </div>
       </span>
     </div>
   );

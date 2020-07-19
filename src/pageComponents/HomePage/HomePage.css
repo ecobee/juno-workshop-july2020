@@ -1,8 +1,11 @@
-.HomePage {
-    margin: auto;
+.home-page {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-items: center;
 }
 
-.CardContainer {
+.card-container {
     display: flex;
     justify-content: space-between;
     flex-flow: row wrap;
@@ -10,12 +13,12 @@
   
   
 @media (min-width: 1024px) {
-    .HomePage {
+    .home-page {
         width: 100%;
     }
 }
 @media (min-width: 1024px) {
-    .HomePage {
+    .card-container {
         width: 67%;
     }
 }
