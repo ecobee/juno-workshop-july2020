@@ -9,18 +9,15 @@ class CardContainer extends React.Component {
 		super(props)
 		this.state = {
 			movie: null,
-			isLoading: false,
+			isLoading: true,
 			isError: false,
 		}
 	}
 
 	async componentDidMount() {
 		const { movieId } = this.props
-		this.setState({
-			isLoading: true,
-		})
 		try {
-			const response = await movieApiService.getSingleMovie(movieId)
+			const response = await movieApiService.getSingle(movieId)
 			this.setState({
 				isLoading: false,
 				movie: response,

@@ -1,0 +1,15 @@
+.generic-error-page-wrapper {
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+	background-color: #000000;
+	align-items: center;
+	justify-content: center;
+}
+
+.generic-error-page-description {
+	font-size: 48px;
+	font-weight: bold;
+	font-family: 'Comic Sans MS', cursive, sans-serif;
+	color: #ffffff;
+}

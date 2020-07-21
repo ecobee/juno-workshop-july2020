@@ -1,9 +1,12 @@
 import React from 'react'
 import ReactModal from 'react-modal'
 
-import HomePage from '../../pageComponents/HomePage'
-
 import CardContainer from '../card-container'
+
+import HomePage from '../../pageComponents/HomePage'
+import GenericErrorPage from '../../pageComponents/GenericErrorPage'
+
+import Search from '../../components/search'
 
 import movieApiService from '../../services/movieApiService'
 
@@ -12,7 +15,7 @@ export default class HomeContainer extends React.Component {
 		super(props)
 		this.state = {
 			error: null,
-			isLoaded: false,
+			isLoading: true,
 			movies: [],
 			showMovieDetailsModal: false,
 			currentMovieId: null,
@@ -21,16 +24,16 @@ export default class HomeContainer extends React.Component {
 
 	async componentDidMount() {
 		try {
-			const response = await movieApiService.getTrendingMoviesToday()
+			const response = await movieApiService.getTrendingToday()
 
 			this.setState({
-				isLoaded: true,
+				isLoading: false,
 				movies: response.results,
 			})
 		} catch (e) {
 			this.setState({
 				error: e,
-				isLoaded: true,
+				isLoading: false,
 			})
 		}
 	}
@@ -43,27 +46,62 @@ export default class HomeContainer extends React.Component {
 		this.setState({ showMovieDetailsModal: false })
 	}
 
+	handleSearch = async (movieName) => {
+		try {
+			this.setState({
+				isLoading: true,
+			})
+
+			const response = await movieApiService.getByName(movieName)
+
+			this.setState({
+				isLoading: false,
+				movies: response.results,
+			})
+		} catch (e) {
+			this.setState({
+				error: e,
+				isLoading: false,
+			})
+		}
+	}
+
 	render() {
-		const { error, isLoaded, movies, currentMovieId } = this.state
+		const { isError, isLoading, movies, currentMovieId } = this.state
 		const hasMovies = movies && movies.length > 0
+
 		return (
 			<>
-				{error && <div>Error: {error.message}</div>}
-				{!isLoaded && <div>Loading...</div>}
-				{isLoaded && !error && hasMovies && (
-					<>
-						<HomePage movies={movies} onCardClick={this.handleOpenMovieModal} />
-						<ReactModal
-							isOpen={this.state.showMovieDetailsModal}
-							// gets called for closing the modal via esc / other keys
-							onRequestClose={this.handleCloseMovieModal}
-							ariaHideApp={false}
-						>
-							<button onClick={this.handleCloseMovieModal}>X</button>
-							<CardContainer movieId={currentMovieId} />
-						</ReactModal>
-					</>
-				)}
+				<>
+					{isLoading && <div>Loading...</div>}
+					{isError && (
+						<GenericErrorPage description="Oh no! An error has occurred" />
+					)}
+					<div>
+						<Search onSubmit={this.handleSearch} />
+					</div>
+					{!isLoading && !isError && hasMovies && (
+						<>
+							<HomePage
+								movies={movies}
+								onCardClick={this.handleOpenMovieModal}
+								onSearchClick={this.handleSearch}
+							/>
+							<ReactModal
+								isOpen={this.state.showMovieDetailsModal}
+								// gets called for closing the modal via esc / other keys
+								onRequestClose={this.handleCloseMovieModal}
+								ariaHideApp={false}
+							>
+								<button onClick={this.handleCloseMovieModal}>X</button>
+								<CardContainer movieId={currentMovieId} />
+							</ReactModal>
+						</>
+					)}
+					{!isLoading && !isError && !hasMovies && (
+						<GenericErrorPage description="Movies could not be found. Try again." />
+					)}
+				</>
 			</>
 		)
 	}
