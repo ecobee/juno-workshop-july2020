@@ -1,5 +1,6 @@
 import React from "react";
 import ReactModal from "react-modal";
+import Modal from "../../components/modal/Modal";
 
 import HomePage from "../../pageComponents/HomePage";
 
@@ -13,6 +14,7 @@ export default class HomeContainer extends React.Component {
       isLoaded: false,
       movies: [],
       showMovieDetailsModal: false,
+      selectedMovieId: -1,
     };
   }
 
@@ -39,13 +41,16 @@ export default class HomeContainer extends React.Component {
     }
   }
 
-  handleOpenMovieModal = () => {
+  handleOpenMovieModal = (movieId) => {
     this.setState({ showMovieDetailsModal: true });
+    this.setState({ selectedMovieId: movieId });
+
   };
 
   handleCloseMovieModal = () => {
     this.setState({ showMovieDetailsModal: false });
   };
+
 
   render() {
     const { error, isLoaded, movies } = this.state;
@@ -63,6 +68,7 @@ export default class HomeContainer extends React.Component {
               onRequestClose={this.handleCloseMovieModal}
             >
               <button onClick={this.handleCloseMovieModal}>X</button>
+              {this.state.showMovieDetailsModal && <Modal movieId={this.state.selectedMovieId}></Modal>}
             </ReactModal>
           </>
         )}

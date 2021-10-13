@@ -1,0 +1,16 @@
+.infoCard {
+    padding: 10px;
+
+}
+
+
+.img-modal {
+    padding: 10px;
+    width: 50%;
+    height: auto;
+}
+
+.modal-container {
+    display: flex;
+    flex-direction: row;
+}
